@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>一级详情</title>
+    <style>
+      body,
+      html {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        background: linear-gradient(to bottom, #0047ab, #87ceeb);
+        width: 100%;
+        height: 100%;
+      }
+
+      button {
+        margin-bottom: 20px;
+      }
+
+      .bg {
+        border: 1px solid #ccc;
+        margin: 30px;
+        background: #ffffff;
+      }
+
+      .box {
+        border: 1px solid #ccc;
+        padding: 10px;
+      }
+
+      .item {
+        display: flex;
+        justify-content: space-between;
+        border: 1px solid #ccc;
+        border-bottom: none;
+        padding: 10px;
+        cursor: pointer;
+      }
+
+      .item:last-child {
+        border-bottom: 1px solid #ccc;
+      }
+
+      .item:hover {
+        background-color: #f0f0f0;
+      }
+
+      .item.active {
+        background-color: #e0f7fa;
+      }
+
+      .item-label {
+        flex: 1;
+        margin-right: 10px;
+        box-sizing: border-box;
+      }
+
+      .vertical-border {
+        width: 1px;
+        background-color: #ccc;
+        margin: 0 10px;
+        align-self: stretch;
+      }
+
+      .item-description {
+        flex: 2;
+        box-sizing: border-box;
+      }
+
+      .two-popup {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+      }
+
+      .two-popup-content {
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        width: 80%;
+        max-width: 800px;
+        height: 80%;
+        overflow-y: auto;
+        position: relative;
+      }
+
+      .two-close-button {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: none;
+        border: none;
+        font-size: 20px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bg">
+      <div class="box">
+        <div class="item">
+          <div class="item-label">制定学习计划</div>
+          <div class="vertical-border"></div>
+          <div class="item-description">
+            根据党的方针政策、上级党组织要求以及党员队伍实际情况，制定详细的理论学习计划，包括学习内容、学习时间、学习方式等，确保学习有序进行。
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="item-label">组织学习活动</div>
+          <div class="vertical-border"></div>
+          <div class="item-description">
+            负责组织各类党员理论学习活动，如集中培训、专题讲座、研讨会、主题党目活动等，要做好场地安排、资料准备、人员协调等工作，保证学习活动顺利开展。
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="item-label">学习资源整合</div>
+          <div class="vertical-border"></div>
+          <div class="item-description">
+            收集、整理和筛选各类学习资料，包括文件、书籍、文章、视频等，为党员提供丰富、准确、有针对性的学习资源，还可以根据实际情况编写学习手册、制作学习课件等。
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="item-label">授课讲解</div>
+          <div class="vertical-border"></div>
+          <div class="item-description">
+            由党校教师、专家学者、党组织负责人等担任讲师，对党的理论知识进行系统讲解，帮助党员深入理解和把握理论内涵、精神实质和实践要求，需要讲师具备扎实的理论功底和良好的表达能力。
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="item-label">学习辅导</div>
+          <div class="vertical-border"></div>
+          <div class="item-description">
+            为党员在学习过程中遇到的问题提供解答和辅导，组织学习小组讨论，引导党员相互交流、共同提高，可通过线上线下相结合的方式，及时为党员提供学习支持。
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="item-label">案例分析与研究</div>
+          <div class="vertical-border"></div>
+          <div class="item-description">
+            结合实际工作和社会热点问题，进行案例分析和研究，引导党员运用理论知识解决实际问题，提高党员的理论应用能力和实践水平。
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="item-label">学习监督</div>
+          <div class="vertical-border"></div>
+          <div class="item-description">
+            对党员的学习情况进行跟踪监督，检查党员的学习出勤情况、学习笔记、参与讨论等情况，及时发现和解决学习中存在的问题，确保党员真正参与到学习中来。
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="item-label">效果考核</div>
+          <div class="vertical-border"></div>
+          <div class="item-description">
+            建立科学合理的考核评价机制，通过考试、撰写心得体会、开展学习成果汇报等方式，对党员的学习效果进行考核评价，将考核结果与党员的评先评优、职务晋升等挂钩，激发党员的学习积极性和主动性。
+          </div>
+        </div>
+      </div>
+
+      <div class="two-popup" id="two-popup">
+        <div class="two-popup-content">
+          <button class="two-close-button" onclick="closeTablePopup()">
+            ×
+          </button>
+          <div id="two-popup-content"></div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // 这里不需要 JavaScript 代码，因为这些逻辑将由 index.html 控制
+    </script>
+  </body>
+</html>
