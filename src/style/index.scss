@@ -1,0 +1,22 @@
+.table-container {
+  padding: 10px;
+  background: linear-gradient(to bottom, #0047ab, #87ceeb);
+}
+
+.details-modal-table {
+  pointer-events: none;
+}
+
+.details-dialog {
+  margin-right: 100px;
+  pointer-events: auto;
+}
+
+.custom-modal-dialog {
+  pointer-events: none;
+}
+
+.custom-dialog {
+  margin-left: 100px;
+  pointer-events: auto;
+}
